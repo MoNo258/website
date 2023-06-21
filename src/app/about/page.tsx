@@ -15,12 +15,12 @@ const about = () => {
                 <title>Lorem Ipsum | About Page</title>
                 <meta name="description" content="description copy" />
             </Head>
-            <main className="flex w-full flex-col items-center justify-center">
+            <main className="flex w-full flex-col items-center justify-center dark:text-light">
                 <div className="pt-16">
                     <AnimatedText text="Lorem Ipsum Dolor" className="mb-16" />
                     <div className="grid 2-full grid-cols-8 gap-16">
                         <div className="col-span-3 flex flex-col justify-start items-start">
-                            <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
+                            <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                                 Bio
                             </h2>
                             <p className="font-medium">
@@ -69,7 +69,7 @@ const about = () => {
                                 <span className="inline-block text-7xl font-bold">
                                     <AnimatedNumbers value={50} />+
                                 </span>
-                                <h2 className="text-xl font-medium capitalize text-dark/75">
+                                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
                                     lorem ipsum
                                 </h2>
                             </div>
@@ -78,7 +78,7 @@ const about = () => {
                                 <span className="inline-block text-7xl font-bold">
                                     <AnimatedNumbers value={40} />+
                                 </span>
-                                <h2 className="text-xl font-medium capitalize text-dark/75">
+                                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
                                     lorem ipsum
                                 </h2>
                             </div>
@@ -87,7 +87,7 @@ const about = () => {
                                 <span className="inline-block text-7xl font-bold">
                                     <AnimatedNumbers value={4} />+
                                 </span>
-                                <h2 className="text-xl font-medium capitalize text-dark/75">
+                                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
                                     lorem ipsum dolor
                                 </h2>
                             </div>

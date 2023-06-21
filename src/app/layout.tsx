@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import { Montserrat, Roboto_Mono } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 
 const montserrat = Montserrat({
@@ -26,10 +27,20 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
+        <html lang="en" className="">
             <body
-                className={`${montserrat.variable} ${roboto_mono.variable} bg-light text-dark`}
+                className={`${montserrat.variable} ${roboto_mono.variable} bg-light text-dark dark:bg-dark `}
+                // className={`${montserrat.variable} ${roboto_mono.variable} bg-light text-dark`}
             >
+                <Script id="theme-switcher" strategy="beforeInteractive">
+                    {`
+                    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                        document.documentElement.classList.add('dark')
+                    } else {
+                        document.documentElement.classList.remove('dark')
+                    }
+                    `}
+                </Script>
                 <Navbar />
                 <div className="px-32 py-8">{children}</div>
                 <Footer />

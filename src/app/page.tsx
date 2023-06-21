@@ -14,7 +14,7 @@ interface HomeProps {
 export default function Home({ params, searchParams }: HomeProps) {
     return (
         <>
-            <main className="font-sans w-full min-h-screen flex items-center">
+            <main className="font-sans w-full min-h-screen flex items-center dark:text-light">
                 <div className="flex items-center justify-between w-full">
                     <div className="w-1/2">
                         <Image
@@ -43,7 +43,8 @@ export default function Home({ params, searchParams }: HomeProps) {
                                 target="_blank"
                                 className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg 
                                 text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid 
-                                border-transparent hover:border-dark"
+                                border-transparent hover:border-dark dark:bg-light dark:text-dark
+                                hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
                                 download={true}
                             >
                                 Resume
@@ -52,7 +53,7 @@ export default function Home({ params, searchParams }: HomeProps) {
                             <Link
                                 href="mailto:test-dummy-mail@text.io"
                                 target="_blank"
-                                className="ml-4 text-lg font-medium capitalize text-dark underline"
+                                className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light"
                             >
                                 Contact
                             </Link>
