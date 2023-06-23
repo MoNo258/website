@@ -25,9 +25,12 @@ const Project: React.FC<ProjectProps> = ({
     return (
         <article
             className="w-full flex flex-col justify-center items-center rounded-2xl border border-solid 
-        border-dark bg-light p-6 relative"
+        border-dark bg-light p-6 relative dark:border-light dark:bg-dark"
         >
-            <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl" />
+            <div
+                className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl
+            dark:bg-light"
+            />
             <Link
                 href={link}
                 target="_blank"
@@ -42,7 +45,9 @@ const Project: React.FC<ProjectProps> = ({
                 />
             </Link>
             <div className="w-full flex flex-col justify-between items-start mt-4">
-                <span className="text-primary font-medium text-xl">{type}</span>
+                <span className="text-primary font-medium text-xl dark:text-primaryDark">
+                    {type}
+                </span>
                 <Link
                     href={link}
                     target="_blank"

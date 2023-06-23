@@ -17,7 +17,7 @@ const projects = () => {
                 <title>Lorem Ipsum | Projects Page</title>
                 <meta name="description" content="description copy" />
             </Head>
-            <main className="w-full mb-16 flex flex-col justify-center items-center">
+            <main className="w-full mb-16 flex flex-col justify-center items-center dark:text-light">
                 <div className="pt-16">
                     <AnimatedText
                         text="Nullam vel fringilla orci"

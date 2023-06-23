@@ -19,7 +19,7 @@ const Experience: React.FC<ExperienceProps> = ({ className }) => {
             <div ref={ref} className="w-[75%] mx-auto relative">
                 <motion.div
                     style={{ scaleY: scrollYProgress }}
-                    className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
+                    className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light"
                 />
                 <ul className="w-full flex flex-col justify-between items-start ml-4">
                     <JobDetails

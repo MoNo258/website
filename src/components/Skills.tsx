@@ -10,8 +10,11 @@ const Skills: React.FC<SkillsProps> = ({ className }) => {
             <h2 className="font-bold text-8xl mt-64 w-full text-center">
                 Skills
             </h2>
-            <div className="w-full h-screen relative flex justify-center items-center rounded-full bg-circularLight">
-                <Skill className="!p-8" name="Skill" x="0vw" y="0vw" />
+            <div
+                className="w-full h-screen relative flex justify-center items-center rounded-full bg-circularLight
+            dark:bg-circularDark"
+            >
+                <Skill className="!p-6" name="Skill" x="0vw" y="0vw" />
                 <Skill name="Skill1" x="-20vw" y="2vw" />
                 <Skill name="Skill2" x="-5vw" y="-10vw" />
                 <Skill name="Skill3" x="20vw" y="6vw" />
