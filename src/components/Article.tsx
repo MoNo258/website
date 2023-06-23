@@ -22,10 +22,13 @@ const Article: React.FC<ArticleProps> = ({ img, title, date, link }) => {
             }}
             viewport={{ once: true }}
             className="relative w-full p-4 py-6 my-4 rounded-xl flex justify-between items-center
-        border border-solid border-dark bg-light text-dark first:mt-0 border-r-4 border-b-4"
+        border border-solid border-dark bg-light text-dark first:mt-0 border-r-4 border-b-4 
+        dark:border-light dark:bg-dark dark:text-light"
         >
             <MovingImg title={title} img={img} link={link} />
-            <span className="text-primary font-semibold pl-4">{date}</span>
+            <span className="text-primary font-semibold pl-4 dark:text-primaryDark">
+                {date}
+            </span>
         </motion.li>
     );
 };

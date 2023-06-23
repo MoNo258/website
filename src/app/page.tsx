@@ -1,10 +1,16 @@
+'use client';
+
 import AnimatedText from '@/components/AnimatedText';
 import CircularElement from '@/components/CircularElement';
 import { LinkArrow } from '@/components/Icons';
-import Image from 'next/image';
+import Image, { ImageLoader } from 'next/image';
 import Link from 'next/link';
 import profilePic from '../../public/images/woman.png';
 import Lightbulb from '../../public/svg/lightbulb.svg';
+
+const imageLoader: ImageLoader = ({ src, width, quality }) => {
+    return `https://example.com/${src}?w=${width}&q=${quality || 75}`;
+};
 
 interface HomeProps {
     params: { slug: string };
@@ -21,6 +27,19 @@ export default function Home({ params, searchParams }: HomeProps) {
                             src={profilePic}
                             alt="woman profile graphics"
                             className="w-1/2 mx-auto"
+                            priority
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                        />
+
+                        <Image
+                            loader={imageLoader}
+                            src={profilePic}
+                            alt="woman profile graphics"
+                            width={500}
+                            height={500}
+                            className="w-1/2 mx-auto"
+                            priority
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                         />
                     </div>
                     <div className="w-1/2 flex flex-col items-center self-center">

@@ -22,8 +22,14 @@ const FeaturedArticle: React.FC<FeaturedArticleProps> = ({
     link,
 }) => {
     return (
-        <li className="relative col-span-1 w-full p-4 rounded-2xl border border-solid border-dark bg-light">
-            <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl" />
+        <li
+            className="relative col-span-1 w-full p-4 rounded-2xl border border-solid border-dark bg-light
+        dark:border-light dark:bg-dark"
+        >
+            <div
+                className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl
+            dark:bg-light"
+            />
             <Link
                 href={link}
                 target="_blank"
@@ -35,6 +41,8 @@ const FeaturedArticle: React.FC<FeaturedArticleProps> = ({
                     className="w-full h-auto"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.2 }}
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                 />
             </Link>
             <Link href={link} target="_blank" className="">
@@ -43,7 +51,9 @@ const FeaturedArticle: React.FC<FeaturedArticleProps> = ({
                 </h2>
             </Link>
             <p className="text-sm mb-2">{summary}</p>
-            <span className="text-primary font-semibold">{time}</span>
+            <span className="text-primary font-semibold dark:text-primaryDark">
+                {time}
+            </span>
         </li>
     );
 };

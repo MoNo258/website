@@ -15,7 +15,7 @@ const articles = () => {
                 <title>Lorem Ipsum | Articles Page</title>
                 <meta name="description" content="description copy" />
             </Head>
-            <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden">
+            <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden  dark:text-light">
                 <div className="pt-16">
                     <AnimatedText
                         text="Ut viverra sapien, eu lobortis nibh"
