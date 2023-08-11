@@ -35,7 +35,7 @@ interface AnimatedTextProps {
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({ text, className }) => {
     return (
-        <div className="w-fill mx-auto py-2 flex items-center justify-center text-8xl text-center overflow-hidden">
+        <div className="w-fill mx-auto py-2 flex items-center justify-center text-8xl text-center overflow-hidden sm:py-0">
             <motion.h1
                 className={`inline-block w-full text-dark font-bold capitalize dark:text-light ${className}`}
                 variants={quote}

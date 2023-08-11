@@ -1,12 +1,20 @@
 'use client';
-import { useState } from 'react';
+import { MouseEventHandler } from 'react';
 
-const HamburgerButton: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
+interface HamburgerButtonProps {
+    isOpen: boolean;
+    handleClick: MouseEventHandler<HTMLButtonElement>;
+}
 
-    const handleClick = () => {
-        setIsOpen(!isOpen);
-    };
+const HamburgerButton: React.FC<HamburgerButtonProps> = ({
+    isOpen,
+    handleClick,
+}) => {
+    // const [isOpen, setIsOpen] = useState(false);
+
+    // const handleClick = () => {
+    //     setIsOpen(!isOpen);
+    // };
 
     return (
         <button
