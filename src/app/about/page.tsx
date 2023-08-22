@@ -22,7 +22,7 @@ const about = () => {
                         className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
                     />
                     <div className="grid 2-full grid-cols-8 gap-16 sm:gap-8">
-                        <div className="col-span-3 flex flex-col justify-start items-start xl:col-span-4">
+                        <div className="col-span-3 flex flex-col justify-start items-start xl:col-span-4 md-order-2 md:col-span-8">
                             <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                                 Bio
                             </h2>
@@ -57,7 +57,7 @@ const about = () => {
                         </div>
                         <div
                             className="col-span-3 relative h-max rounded-2xl border-2 border-solid
-                            border-dark bg-light p-8 dark:bg-dark dark:border-light xl:col-span-4 md-order-1"
+                            border-dark bg-light p-8 dark:bg-dark dark:border-light xl:col-span-4 md-order-1 md:col-span-8"
                         >
                             <div
                                 className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark
@@ -74,31 +74,40 @@ const about = () => {
 
                         <div
                             className="col-span-2 flex flex-col justify-between items-end 
-                        xl:col-span-8 xl:flex-row xl:items-center"
+                        xl:col-span-8 xl:flex-row xl:items-center md-order-3"
                         >
-                            <div className="flex flex-col justify-center items-end">
-                                <span className="inline-block text-7xl font-bold">
+                            <div className="flex flex-col justify-center items-end xl:items-center">
+                                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
                                     <AnimatedNumbers value={50} />+
                                 </span>
-                                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
+                                <h2
+                                    className="text-xl font-medium capitalize text-dark/75 dark:text-light/75
+                                                xl:text-center md:text-lg sm:text-base xs:text-sm"
+                                >
                                     lorem ipsum
                                 </h2>
                             </div>
 
-                            <div className="flex flex-col justify-center items-end">
-                                <span className="inline-block text-7xl font-bold">
+                            <div className="flex flex-col justify-center items-end xl:items-center">
+                                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
                                     <AnimatedNumbers value={40} />+
                                 </span>
-                                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
+                                <h2
+                                    className="text-xl font-medium capitalize text-dark/75 dark:text-light/75
+                                                xl:text-center md:text-lg sm:text-base xs:text-sm"
+                                >
                                     lorem ipsum
                                 </h2>
                             </div>
 
-                            <div className="flex flex-col justify-center items-end">
-                                <span className="inline-block text-7xl font-bold">
+                            <div className="flex flex-col justify-center items-end xl:items-center">
+                                <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
                                     <AnimatedNumbers value={4} />+
                                 </span>
-                                <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
+                                <h2
+                                    className="text-xl font-medium capitalize text-dark/75 dark:text-light/75
+                                                xl:text-center md:text-lg sm:text-base xs:text-sm"
+                                >
                                     lorem ipsum dolor
                                 </h2>
                             </div>

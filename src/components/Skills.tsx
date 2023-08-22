@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Skill from './Skill';
 
 interface SkillsProps {
@@ -7,14 +8,24 @@ interface SkillsProps {
 const Skills: React.FC<SkillsProps> = ({ className }) => {
     return (
         <>
-            <h2 className="font-bold text-8xl mt-64 w-full text-center">
+            <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32">
                 Skills
             </h2>
             <div
                 className="w-full h-screen relative flex justify-center items-center rounded-full bg-circularLight
-            dark:bg-circularDark"
+            dark:bg-circularDark
+            lg:h-[80vh] sm:h-[60vh] xs:h-[50vh] lg:bg-circularLightLg lg:dark:bg-circularDarkLg
+            md:bg-circularLightMd md:dark:bg-circularDarkMd
+            sm:bg-circularLightSm sm:dark:bg-circularDarkSm"
             >
-                <Skill className="!p-6" name="Skill" x="0vw" y="0vw" />
+                <motion.div
+                    className="flex justify-center items-center rounded-full font-semibold bg-dark text-light
+            p-6 shadow-dark cursor-pointer dark:text-dark dark:bg-light lg:p-6 md:p-4 xs:text-xs xs:p-2"
+                    whileHover={{ scale: 1.2 }}
+                >
+                    Skill
+                </motion.div>
+
                 <Skill name="Skill1" x="-20vw" y="2vw" />
                 <Skill name="Skill2" x="-5vw" y="-10vw" />
                 <Skill name="Skill3" x="20vw" y="6vw" />
