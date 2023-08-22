@@ -1,6 +1,7 @@
 import AnimatedText from '@/components/AnimatedText';
 import CircularElement from '@/components/CircularElement';
 import { LinkArrow } from '@/components/Icons';
+import TransitionEffect from '@/components/TransitionEffect';
 import Image from 'next/image';
 import Link from 'next/link';
 import profilePic from '../../public/images/woman.png';
@@ -14,6 +15,7 @@ interface HomeProps {
 export default function Home({ params, searchParams }: HomeProps) {
     return (
         <>
+            <TransitionEffect />
             <main className="font-sans w-full min-h-screen flex items-center dark:text-light">
                 <div className="flex items-center justify-between w-full lg:flex-col">
                     <div className="w-1/2 md:w-full">

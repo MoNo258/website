@@ -46,7 +46,7 @@ const MovingImg: React.FC<MovingImgProps> = ({ img, title, link }) => {
                 ref={imgRef}
                 src={img}
                 alt={title}
-                className="absolute z-10 w-96 h-auto hidden rounded-lg"
+                className="absolute z-10 w-96 h-auto hidden rounded-lg md:!hidden"
             />
         </Link>
     );

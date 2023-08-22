@@ -1,6 +1,10 @@
+'use client';
+
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import { AnimatePresence } from 'framer-motion';
 import { Montserrat, Roboto_Mono } from 'next/font/google';
+import { usePathname, useRouter } from 'next/navigation';
 import Script from 'next/script';
 import './globals.css';
 
@@ -26,6 +30,8 @@ export default function RootLayout({
 }: {
     children: React.ReactNode;
 }) {
+    const router = useRouter();
+    const pathname = usePathname();
     return (
         <html lang="en" className="">
             <body
@@ -42,9 +48,15 @@ export default function RootLayout({
                     `}
                 </Script>
                 <Navbar />
-                <div className="px-32 py-8 xl:p-24 lg:p-16 md:p-12 sm:p-8">
-                    {children}
-                </div>
+                <AnimatePresence mode="wait">
+                    <div
+                        // key={router.asPath}
+                        key={pathname}
+                        className="px-32 py-8 xl:p-24 lg:p-16 md:p-12 sm:p-8"
+                    >
+                        {children}
+                    </div>
+                </AnimatePresence>
                 <Footer />
             </body>
         </html>

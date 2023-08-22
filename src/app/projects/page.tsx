@@ -3,6 +3,7 @@
 import AnimatedText from '@/components/AnimatedText';
 import FeaturedProject from '@/components/FeaturedProject';
 import Project from '@/components/Project';
+import TransitionEffect from '@/components/TransitionEffect';
 import Head from 'next/head';
 import Project1 from '../../../public/images/projects-1.jpg';
 import Project2 from '../../../public/images/projects-2.jpg';
@@ -17,13 +18,14 @@ const projects = () => {
                 <title>Lorem Ipsum | Projects Page</title>
                 <meta name="description" content="description copy" />
             </Head>
+            <TransitionEffect />
             <main className="w-full mb-16 flex flex-col justify-center items-center dark:text-light">
                 <div className="pt-16">
                     <AnimatedText
                         text="Nullam vel fringilla orci"
-                        className="mb-16"
+                        className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
                     />
-                    <div className="grid grid-cols-12 gap-24">
+                    <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
                         <div className="col-span-12 flex flex-col justify-start items-start">
                             <FeaturedProject
                                 type="Featured Project"
@@ -34,7 +36,7 @@ const projects = () => {
                                 github="/"
                             />
                         </div>
-                        <div className="col-span-6 ">
+                        <div className="col-span-6 sm:col-span-12">
                             <Project
                                 type="Project"
                                 title="Project 2"
@@ -43,7 +45,7 @@ const projects = () => {
                                 github="/"
                             />
                         </div>
-                        <div className="col-span-6 ">
+                        <div className="col-span-6 sm:col-span-12">
                             <Project
                                 type="Project"
                                 title="Project 2.1"
@@ -62,7 +64,7 @@ const projects = () => {
                                 github="/"
                             />
                         </div>
-                        <div className="col-span-6 ">
+                        <div className="col-span-6 sm:col-span-12">
                             <Project
                                 type="Project"
                                 title="Project 4"
@@ -71,7 +73,7 @@ const projects = () => {
                                 github="/"
                             />
                         </div>
-                        <div className="col-span-6 ">
+                        <div className="col-span-6 sm:col-span-12">
                             <Project
                                 type="Project"
                                 title="Project 5"

@@ -4,6 +4,7 @@ import AnimatedNumbers from '@/components/AnimatedNumbers';
 import AnimatedText from '@/components/AnimatedText';
 import Experience from '@/components/Experience';
 import Skills from '@/components/Skills';
+import TransitionEffect from '@/components/TransitionEffect';
 import Head from 'next/head';
 import Image from 'next/image';
 import profilePic from '../../../public/images/woman-01.png';
@@ -15,13 +16,14 @@ const about = () => {
                 <title>Lorem Ipsum | About Page</title>
                 <meta name="description" content="description copy" />
             </Head>
+            <TransitionEffect />
             <main className="flex w-full flex-col items-center justify-center dark:text-light">
                 <div className="pt-16">
                     <AnimatedText
                         text="Lorem Ipsum Dolor"
                         className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
                     />
-                    <div className="grid 2-full grid-cols-8 gap-16 sm:gap-8">
+                    <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
                         <div className="col-span-3 flex flex-col justify-start items-start xl:col-span-4 md-order-2 md:col-span-8">
                             <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                                 Bio
@@ -73,8 +75,9 @@ const about = () => {
                         </div>
 
                         <div
-                            className="col-span-2 flex flex-col justify-between items-end 
-                        xl:col-span-8 xl:flex-row xl:items-center md-order-3"
+                            className="col-span-2 flex flex-col justify-between items-end md:order-3
+                                        xl:col-span-8 xl:flex-row xl:items-center"
+                            // FIXME: 'xl:flex-row' is not working, frankly speaking 'xl:' seems to not work at all inhere
                         >
                             <div className="flex flex-col justify-center items-end xl:items-center">
                                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
