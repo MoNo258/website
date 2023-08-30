@@ -19,12 +19,10 @@ export default function Home({ params, searchParams }: HomeProps) {
             <main className="font-sans w-full min-h-screen flex items-center dark:text-light">
                 <div className="flex items-center justify-between w-full lg:flex-col">
                     <div className="w-1/2 md:w-full">
-                        {/* FIXME: czy w-1/2 czy w-full dla poszczególnych ekranów? */}
-                        {/* Tu czy na Image? */}
                         <Image
                             src={profilePic}
                             alt="woman profile graphics"
-                            className="w-1/2 mx-auto lg:hidden md:inline-block md:w-1/2"
+                            className="w-1/2 mx-auto lg:hidden md:flex  md:w-1/2"
                             priority
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
                         />

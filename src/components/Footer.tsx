@@ -11,7 +11,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
             className="w-full border-t-2 border-solid border- dark font0medium text-lg
         dark:text-light dark:border-light sm:text-base"
         >
-            <div className="px-32 py-8 flex items-center justify-between lg:flex-col lg:py-6">
+            <div className="px-32 py-8 flex items-center justify-between lg:flex-col lg:py-6 md:px-10">
                 <span>
                     {new Date().getFullYear()} &copy; All Rights Reserved.
                 </span>
