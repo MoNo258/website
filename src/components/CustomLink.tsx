@@ -9,10 +9,6 @@ interface CustomLinkProps {
     className?: string;
 }
 
-// class CustomLink extends Link {
-
-// }
-
 const CustomLink: React.FC<CustomLinkProps> = ({ href, title, className }) => {
     const pathname = usePathname();
 
@@ -27,6 +23,10 @@ const CustomLink: React.FC<CustomLinkProps> = ({ href, title, className }) => {
                 group-hover:w-full transition-[width] ease duration-300
                 ${pathname === href ? 'w-full' : 'w-0'}
                 dark:bg-light
+                ${
+                    className?.includes('text-primary') &&
+                    'bg-primary dark:bg-primaryDark'
+                }
             `}
             >
                 &nbsp;
